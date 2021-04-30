@@ -1,6 +1,7 @@
 package minhacidademelhor.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Pessoa {
 	
@@ -11,6 +12,7 @@ public class Pessoa {
 	private String telefone;
 	private Sexo sexo;
 	private LocalDate dataNascimento;
+	List<Endereco> enderecos;
 	
 	
 	public Pessoa() {
@@ -68,5 +70,16 @@ public class Pessoa {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+	
 
 }

@@ -1,5 +1,6 @@
 package minhacidademelhor.controller;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,24 @@ public class PessoaController {
 	public boolean salvarPessoa(Pessoa pessoa) {
 		pessoaDao = new PessoaDao();
 		boolean isSalvo = pessoaDao.salvarPessoa(pessoa);
+		return isSalvo;
+	}
+	
+	public boolean editarPessoa(Pessoa pessoa) {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.editarPessoa(pessoa);
+		return isSalvo;
+	}
+	
+	public boolean editarPessoa(int id) {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.deletarPessoa(id);
+		return isSalvo;
+	}
+	
+	public boolean salvarPessoaComEderecos(Pessoa pessoa) throws SQLException {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.salvarPessoaComEderecos(pessoa);
 		return isSalvo;
 	}
 }
