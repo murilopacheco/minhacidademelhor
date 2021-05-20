@@ -15,6 +15,7 @@ public class PessoaController {
 		pessoaDao = new PessoaDao();
 		 List<Pessoa> pessoas; 
 		 return pessoas = pessoaDao.listarPessoas();
+//		 return null;
 	}
 
 	public boolean salvarPessoa(Pessoa pessoa) {
